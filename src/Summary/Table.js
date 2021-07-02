@@ -6,7 +6,6 @@ class Table extends Component {
     super(props);  
     }  
     DeleteSummary= () =>{  
-        debugger;
      axios.delete('https://localhost:44317/api/Responses/'+this.props.obj.id)  
     .then(json => {  
     if(json.status===201)

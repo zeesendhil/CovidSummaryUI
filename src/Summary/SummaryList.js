@@ -10,13 +10,10 @@ export default class SummaryList extends Component {
       this.state = {covidsummary: []};  
     }  
     componentDidMount(){  
-      debugger;  
       APIEndPoint(endPoints.Summary).getSummary()
       //axios.get('https://localhost:44317/api/Responses/GetSummary')  
         .then(response => {  
           this.setState({ covidsummary: response.data });  
-          debugger;  
-
         })  
         .catch(function (error) {  
           console.log(error);  

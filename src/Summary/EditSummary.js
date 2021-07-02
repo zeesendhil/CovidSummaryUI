@@ -45,7 +45,6 @@ class Edit extends React.Component {
     APIEndPoint(endPoints.Base).getUAECovidbyId(this.props.match.params.id) 
       //axios.get('https://localhost:44317/api/Responses/'+this.props.match.params.id)  
           .then(response => { 
-              debugger; 
               this.setState({
                   id: response.data.id, 
                 continent: response.data.continent,
@@ -93,7 +92,6 @@ class Edit extends React.Component {
 }  
     
   onSubmit(e) {  
-    debugger;  
     e.preventDefault();  
     const obj = {id: this.props.match.params.id, 
         continent: this.state.continent, 
@@ -114,11 +112,9 @@ class Edit extends React.Component {
         day: this.state.day, 
         time: this.state.time 
     }
-    debugger; 
     APIEndPoint(endPoints.Base).updateUAECovidEntry(obj.id, obj) 
     //axios.put('https://localhost:44317/api/Responses/'+obj.id, obj)  
         .then(res => console.log(res.data));  
-        debugger;  
         this.props.history.push('/UAECovidList'); 
   }  
     render() {  

@@ -11,7 +11,6 @@ export const endPoints = {
 export const APIEndPoint = endPoint => {
 
     let url = HostUrl + endPoint;
-    debugger;
     return {
         getSummary: () => axios.get(url),
         getUAECovidbyId: id => axios.get(url + "/" + id),

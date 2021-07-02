@@ -8,13 +8,10 @@ export default class UAECovidList extends Component {
       this.state = {covidhistory: []};  
     }  
     componentDidMount(){  
-      debugger;  
      //axios.get('https://localhost:44317/api/Responses/GetResponse')  
       APIEndPoint(endPoints.CovidHistory).getSummary()
         .then(response => {  
           this.setState({ covidhistory: response.data });  
-          debugger;  
-
         })  
         .catch(function (error) {  
           console.log(error);  

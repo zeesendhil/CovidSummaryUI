@@ -50,7 +50,6 @@ class AddSummary extends React.Component {
                 }
                 else {
                     alert('Data not Saved');
-                    debugger;
                     this.props.history.push('/UAECovidList')
                 }
             })
