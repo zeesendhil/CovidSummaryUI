@@ -114,8 +114,10 @@ class Edit extends React.Component {
     }
     APIEndPoint(endPoints.Base).updateUAECovidEntry(obj.id, obj) 
     //axios.put('https://localhost:44317/api/Responses/'+obj.id, obj)  
-        .then(res => console.log(res.data));  
-        this.props.history.push('/UAECovidList'); 
+        .then(res => 
+            this.props.history.push('/UAECovidList') 
+        );  
+        
   }  
     render() {  
         return (  

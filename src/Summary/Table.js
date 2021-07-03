@@ -1,20 +1,22 @@
 import React, { Component } from 'react';  
 import axios from 'axios';  
 import { Link } from 'react-router-dom';  
+import { APIEndPoint,endPoints } from '../api';
+
 class Table extends Component {  
-  constructor(props) {  
-    super(props);  
-    }  
     DeleteSummary= () =>{  
-     axios.delete('https://localhost:44317/api/Responses/'+this.props.obj.id)  
+      debugger;
+    APIEndPoint(endPoints.Base).deleteUAECovidEntry(this.props.obj.id) 
+     //axios.delete('https://localhost:44317/api/Responses/'+this.props.obj.id)  
     .then(json => {  
-    if(json.status===201)
-    {  
-        alert('Record deleted successfully!!');  
-        this.props.history.push('/UAECovidList');
-    }  
+      debugger;
+      if(json.status===200)
+      {  
+          alert('Record deleted successfully!!');  
+          window.location.reload(false);
+      }  
     })  
-    }  
+  }  
   render() {  
     return (  
         <tr>  

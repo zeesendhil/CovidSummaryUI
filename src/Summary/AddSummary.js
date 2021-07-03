@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Form, Row, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 //import axios from 'axios';
 import '../Summary/AddSummary.css';
 import { APIEndPoint,endPoints } from '../api';
@@ -123,7 +123,7 @@ class AddSummary extends React.Component {
                             <Label for="_1M_pop" sm={2}>M_pop</Label>
                             <Col sm={10}>
                                 <Input type="text" name="_1M_pop" onChange={this.handleChange} value={this.state._1M_pop}
-                                placeholder="Enter _1M_pop" />
+                                placeholder="Enter M_pop" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
@@ -149,7 +149,7 @@ class AddSummary extends React.Component {
                             <Label for="_1M_pop" sm={2}>M_pop</Label>
                             <Col sm={10}>
                                 <Input type="text" name="D_1M_pop" onChange={this.handleChange} value={this.state.D_1M_pop}
-                                placeholder="Enter _1M_pop" />
+                                placeholder="Enter M_pop" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
@@ -168,7 +168,7 @@ class AddSummary extends React.Component {
                             <Label for="T_1M_pop" sm={2}>M_pop</Label>
                             <Col sm={10}>
                                 <Input type="text" name="T_1M_pop" onChange={this.handleChange} value={this.state.T_1M_pop}
-                                placeholder="Enter _1M_pop" />
+                                placeholder="Enter M_pop" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
